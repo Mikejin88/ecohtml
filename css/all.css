@@ -1,0 +1,72 @@
+/* 背景颜色, 布局 */
+.all-bg {
+	background:linear-gradient(to left, #fff, #E0FFFF, #fff);
+	margin: 0 auto;
+	max-width: 1000px;
+}
+/*屏幕小于414px时, 会覆盖默认的*/
+@media only screen and (max-width: 414px){
+	.all-bg {
+		max-width: 100%;
+	}
+}
+
+/* 主内容区域 */
+.all-main {
+	margin: 0 auto;
+	text-align: center;
+	padding: 0 10px;
+}
+
+/* 白色块 */
+.all-w {
+	background: #FFFFFF;
+	border: 1px solid #F5F5F5;
+	padding: 15px 15px;
+	border-radius: 15px;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 30px;
+}
+.all-w > div {
+	display: flex;
+	justify-content: space-between;
+}
+.all-hr {
+	background: #F5F5F5;
+	width: 90%;
+	height: 1px;
+	margin: 0 auto;
+	margin-top: 10px;
+	margin-bottom: 15px;
+}
+
+/* 按钮 */
+.all-btn {
+	background: #34CECC;
+	color: #FFFFFF;
+	text-align: center;
+}
+.all-btn-2 {
+	background: #EEFBFB;
+	color: #34CECC;
+	text-align: center;
+	border: 1px solid #34CECC;
+	border-radius: 5px;
+	padding: 3px;
+}
+
+/* logo图片 */
+.logo {
+	width: 141px;
+	height: 105px;
+	margin:0 auto;
+}
+
+/* 倒计时显示的时间 */
+.all-time {
+	background: #34CECC;
+	padding: 5px;
+	color: #FFFFFF;
+	border-radius: 3px;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<!-- 网页和手机的兼容 -->
+		<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+		<!-- 引入jquery -->
+		<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>	
+		<title></title>
+	</head>
+
+	<body class="all-bg">
+		<!-- 公共头部组件 -->
+		<div class="comm-head"></div>
+		<!-- 主内容区域 -->
+		<div class="all-main">
+			<!-- 图片 -->
+			<img class="logo" src="img/logo.png"/>
+			<!-- 日将池, 周奖池, 组件 -->
+			<div class="comm-jackpot"></div>
+			<!-- 输入框 -->
+			<div class="comm-filling"></div>
+			<!-- v1..v4 -->
+			<div class="comm-v"></div>
+		</div>
+		
+		
+		
+		<script type="text/javascript">
+			function aa() {
+				console.log(window.tronWeb)
+				console.log(window.tronWeb.defaultAddress.base58, '=')
+				console.log(window.tronWeb.trx.getBalance(window.tronWeb.defaultAddress.base58).then(result => console.log(result)), '=')
+			}
+		</script>
+		
+	</body>
+	
+	<!-- 公共组件, 必须放在下面 -->
+	<script type="text/javascript">
+		/* 头部组件 */
+		$(".comm-head").load('./common/head.html');
+		/* 日周奖池 */
+		$(".comm-jackpot").load('./common/jackpot.html');
+		/* 输入框 */
+		$(".comm-filling").load('./common/filling.html');
+		/* v1 v2 v3 v4 */
+		$(".comm-v").load('./common/v.html');
+	</script>
+	
+	<style>
+		/* 引入样式包 */
+	    @import url("./css/all.css");
+		
+		#head-on0 {
+			color: #34CECC;
+		}
+	</style>
+	
+</html>

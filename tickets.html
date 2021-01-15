@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<!-- 网页和手机的兼容 -->
+		<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+		<!-- 引入jquery -->
+		<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+		<!-- 引入绘图 -->
+		<script src="https://cdn.bootcdn.net/ajax/libs/echarts/5.0.0-rc.1/echarts.common.js"></script>
+		<title></title>
+	</head>
+
+	<body class="all-bg">
+		<!-- 公共头部组件 -->
+		<div class="comm-head"></div>
+		<!-- 主内容区域 -->
+		<div class="all-main">
+			<!-- 图片 -->
+			<img class="logo" src="img/logo.png"/>
+			<!-- 输入框 -->
+			<div class="comm-jinput"></div>
+			<!-- 图表 -->
+			<div class="comm-jmap"></div>
+		</div>
+	</body>
+	
+	<!-- 公共组件, 必须放在下面 -->
+	<script type="text/javascript">
+		/* 头部组件 */
+		$(".comm-head").load('./common/head.html');
+		/* 输入框 */
+		$(".comm-jinput").load('./common/jinput.html');
+		/* 图表 */
+		$(".comm-jmap").load('./common/jmap.html');
+	</script>
+	
+	<style>
+		/* 引入样式包 */
+	    @import url("./css/all.css");
+		
+		#head-on1 {
+			color: #34CECC;
+		}
+	</style>
+	
+</html>

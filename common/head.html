@@ -1,0 +1,97 @@
+<div class="head-layout">
+	<div class="head-nav">
+		<div id="head-on0" onclick="cutRouter(0)">Balance ECO</div>
+		<div id="head-on1" onclick="cutRouter(1)">Ecoswap</div>
+		<div onclick="cutRouter(2)">Uniswap</div>
+		<div id="head-on3" onclick="cutRouter(3)">About</div>
+	</div>
+	<div id="head-btn" class="all-btn head-btn" onclick="connect()">Connect</div>
+	<div id="head-addr" class="head-addr" style="display: none;">
+		<div style="background: #F7F8FA; border-radius: 15px 15px; padding: 8px 0 8px 15px">
+			0.12ETH
+			<span style="background: #EDEEF2; border-radius: 15px; padding: 8px 20px 8px 15px">
+				0x123...456
+			</span>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	// 切换路由
+	function cutRouter(index) {
+		console.log('点击了切换路由', index);
+		if(index === 0) {
+			window.location.href = './index.html';
+		}else if(index === 1) {
+			window.location.href = './tickets.html';
+		}else if(index === 2) {
+			window.open("https://app.uniswap.org/")
+		}else {
+			window.location.href = './about.html';
+		}
+	}
+	
+	// 连接钱包
+	function connect() {
+		console.log('点击了连接');
+		document.getElementById('head-addr').style.display = 'block';
+		document.getElementById('head-btn').style.display = 'none';
+	}
+</script>
+
+<style>
+	/* 默认样式 */
+	.head-nav > div {
+		color: #666666;
+		font-weight: bold;
+	}
+	.head-btn {
+		padding: 7px 8px;
+		border-radius: 5px;
+	}
+	
+	/* 宽度尺度大于1500时 */
+	@media only screen and (min-width: 415px){
+		.head-layout {
+			display: flex;
+			justify-content: space-between;
+			padding: 30px 30px 20px 20px;
+		}
+		.head-nav {
+			display: flex;
+		}
+		.head-nav > div {
+			font-size: 1.15rem;
+			margin-right: 35px;
+		}
+	}
+
+	/* 宽度尺寸小于414时 */
+	@media only screen and (max-width: 414px){
+		.head-layout {
+			display: flex;
+			flex-direction: column;
+		}
+		.head-nav {
+			display: flex;
+			padding: 20px 5px 10px;
+		}
+		.head-nav > div {
+			text-align: center;
+			flex-grow: 1;
+			color: #666666;
+			font-size: 0.9rem;
+			font-weight: bold;
+		}
+		.head-btn {
+			text-align: right;
+			align-self: flex-end;
+			margin-right: 20px;
+		}
+		.head-addr {
+			align-self: flex-end;
+			margin-right: 20px;
+			margin-bottom: 5px;
+		}
+	}
+</style>

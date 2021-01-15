@@ -1,0 +1,70 @@
+<div class="jackpot-layout">
+	<div class="jackpot-pot pot1">
+		<div>日奖池(88)</div>
+		<div>
+			<span class="all-time">00</span>
+			<span> : </span>
+			<span class="all-time">00</span>
+			<span> : </span>
+			<span class="all-time">00</span>
+		</div>
+		<div class="all-time" style="margin: 0 20px;">8888.88 USDT</div>
+	</div>
+	<div class="jackpot-pot">
+		<div>周奖池(99)</div>
+		<div>
+			<span class="all-time">00</span>
+			<span> : </span>
+			<span class="all-time">00</span>
+			<span> : </span>
+			<span class="all-time">00</span>
+			<span> : </span>
+			<span class="all-time">00</span>
+		</div>
+		<div class="all-time" style="margin: 0 20px;">8888.88 USDT</div>
+	</div>
+</div>
+
+<style>
+	/* 默认样式 */
+	.jackpot-layout {
+		margin: 20px 0;
+	}
+	.jackpot-pot {
+		width: 239px;
+		height: 159px;
+		background: #FFFFFF;
+		border-radius: 20px;
+		border: 1px #F5F5F5 solid;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+	}
+	.jackpot-pot > div:nth-child(1) {
+		font-weight: bold;
+	}
+	
+	/* 宽度尺度大于1500时 */
+	@media only screen and (min-width: 415px){
+		.jackpot-layout {
+			display: flex;
+			justify-content: center;
+		}
+		.pot1 {
+			margin-right: 30px;
+		}
+	}
+	
+	/* 宽度尺寸小于414时 */
+	@media only screen and (max-width: 414px){
+		.jackpot-layout {
+			
+		}
+		.jackpot-pot {
+			width: 100%;
+		}
+		.pot1 {
+			margin-bottom: 20px;
+		}
+	}
+</style>

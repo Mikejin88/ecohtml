@@ -1,0 +1,215 @@
+<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+<div class="all-w2">
+	<div id="main"></div>
+</div>
+
+<!-- 第二块 -->
+<div class="all-w">
+	<div>
+		<div>0.000</div>
+		<div>ECO持有量</div>
+	</div>
+	<div class="all-hr"></div>
+	<div>
+		<div>0.000</div>
+		<div>ECO流动性挖矿收益</div>
+	</div>
+	<div class="all-hr"></div>
+	<div>
+		<div>0.000</div>
+		<div>可提现数量 <span class="all-btn-2">提取</span></div>
+	</div>
+</div>
+
+<!-- 第三块 -->
+<div class="all-w">
+	<div>
+		<div>-</div>
+		<div>EID激活 <span class="all-btn-2">激活</span></div>
+	</div>
+	<div class="all-hr"></div>
+	<div>
+		<div>-</div>
+		<div>EID邀请链接 <span class="all-btn-2">复制</span></div>
+	</div>
+	<div class="all-hr"></div>
+	<div>
+		<div>0x123...456</div>
+		<div>我的邀请人地址</div>
+	</div>
+	<div class="all-hr"></div>
+	<div>
+		<div>-</div>
+		<div>EID共振收益 <span class="all-btn-2">提现</span></div>
+	</div>
+</div>
+
+<!-- 第四块 -->
+<div class="all-w">
+	<div>
+		<div>0.000</div>
+		<div>预计可提现收益</div>
+	</div>
+	<div class="all-hr"></div>
+	<div>
+		<div>0.000</div>
+		<div>EID矩阵收益</div>
+	</div>
+	<div class="all-hr"></div>
+	<div>
+		<div>0.000</div>
+		<div>节点分红收益</div>
+	</div>
+	<div class="all-hr"></div>
+	<span class="all-btn" style="
+	width: 50%; margin: 0 auto; border-radius: 5px; padding: 8px 0;
+	">提现</span>
+</div>
+
+<!-- 第五块 -->
+<div class="all-w">
+	<div class="v5-layout">
+		<div class="v5-1">
+			<div class="v5">E1</div>
+			<div class="v5">E2</div>
+			<div class="v5">E3</div>
+			<div class="v5">E4</div>
+			<div class="v5">E5</div>
+		</div>
+		<div class="v5-2">
+			<div style="display: flex; flex-direction: column;">
+				<input class="v5-input" disabled="true" placeholder="请选择质押数量" />
+				<div class="v5-u">
+					<div>3000</div>
+					<div>5000</div>
+					<div>10000</div>
+					<div>15000</div>
+					<div>20000</div>
+					<div>25000</div>
+				</div>
+			</div>
+			<div>E级节点 <span class="all-btn-2">质押</span></div>
+		</div>
+	</div>
+	<div class="all-hr"></div>
+	<div>
+		<div>-</div>
+		<div>统计激活人数</div>
+	</div>
+	<div class="all-hr"></div>
+	<div>
+		<div>00:00:00</div>
+		<div>可撤资倒计时</div>
+	</div>
+	<div class="all-hr"></div>
+	<div>
+		<div>-</div>
+		<div>已质押 <span class="all-btn-2">撤资</span></div>
+	</div>
+</div>
+
+<script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+		data = [["2000-06-05",116],["2000-06-06",129],["2000-06-07",135],["2000-06-08",86],["2000-06-09",73],["2000-06-10",85],["2000-06-11",73],["2000-06-12",68],["2000-06-13",92],["2000-06-14",130],["2000-06-15",245],["2000-06-16",139],["2000-06-17",115],["2000-06-18",111],["2000-06-19",309],["2000-06-20",206],["2000-06-21",137],["2000-06-22",128],["2000-06-23",85],["2000-06-24",94],["2000-06-25",71],["2000-06-26",106],["2000-06-27",84],["2000-06-28",93],["2000-06-29",85],["2000-06-30",73],["2000-07-01",83],["2000-07-02",125],["2000-07-03",107],["2000-07-04",82],["2000-07-05",44],["2000-07-06",72],["2000-07-07",106],["2000-07-08",107],["2000-07-09",66],["2000-07-10",91],["2000-07-11",92],["2000-07-12",113],["2000-07-13",107],["2000-07-14",131],["2000-07-15",111],["2000-07-16",64],["2000-07-17",69],["2000-07-18",88],["2000-07-19",77],["2000-07-20",83],["2000-07-21",111],["2000-07-22",57],["2000-07-23",55],["2000-07-24",60]];
+		
+		option = {
+		    xAxis: {
+		        type: 'category',
+		        data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+		    },
+		    yAxis: {
+		        type: 'value'
+		    },
+		    series: [{
+		        data: [820, 932, 901, 934, 1290, 1330, 1320],
+		        type: 'line'
+		    }]
+		};
+		
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+</script>
+
+<style>
+	#main {
+		height: 300px;
+	}
+	.all-w2 {
+		background: #FFFFFF;
+		border: 1px solid #F5F5F5;
+		border-radius: 15px;
+		margin-bottom: 30px;
+	}
+	.v5-1 {
+		display: flex;
+		width: 100%;
+		overflow-y: auto;
+	}
+	.v5 {
+		background: #EDEEF2;
+		color: #938AA2;
+		padding: 3px 15px;
+		margin-right: 20px;
+		margin-bottom: 10px;
+	}
+	.v5-u {
+		display: flex;
+		overflow-y: auto;
+	}
+	.v5-u > div {
+		border: 1px solid #E0E0E0;
+		margin-right: 10px;
+		padding: 1px 5px;
+		color: #808080;
+	}
+	@media only screen and (min-width: 415px){
+		.v5-layout {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			width: 100%;
+		}
+		.v5-2 {
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+		}
+		.v5-input {
+			padding: 5px 10px;
+			font-size: 15px;
+			border: 1px solid #F5F5F5;
+			border-radius: 5px;
+			height: 25px;
+			margin-bottom: 10px;
+		}
+	}
+	
+	@media only screen and (max-width: 414px){
+		.v5-layout {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+		.v5-2 {
+			width: 100%;
+		}
+		.v5-input {
+			padding: 5px 5px;
+			font-size: 15px;
+			border: 1px solid #F5F5F5;
+			border-radius: 5px;
+			height: 25px;
+			margin-bottom: 10px;
+			text-align: left;
+			
+		}
+		.v5-2 > div:nth-child(2) {
+			margin-top: 20px;
+			text-align: right;
+		}
+		
+	}
+	
+
+</style>

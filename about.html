@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<!-- 网页和手机的兼容 -->
+		<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+		<!-- 引入jquery -->
+		<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+		<script src="./js/a.js"></script>	
+		<title></title>
+	</head>
+	<script>
+		tronWeb.trx.getBalance('THY5GDo41vwjEiWmtmGkEmCJQP6r8xRTNb').then(res => console.log(res, '='));
+		async function aa() {
+			let a2 = await getTRXBalance('THY5GDo41vwjEiWmtmGkEmCJQP6r8xRTNb');
+			console.log(a2);
+			document.getElementById('bb').innerText = a2;
+		}
+		
+	</script>
+	<body class="all-bg" style="background: #FFFFFF;">
+		<div onclick="aa()">{{a}}</div>
+		<div id="bb"></div>
+		<!-- 公共头部组件 -->
+		<div class="comm-head"></div>
+		<!-- 主内容区域 -->
+		<div class="all-main about-layout">
+			<!-- 第一段有背景颜色的 -->
+			<div class="about-1">
+				Balance ECO is a decentralized protocol for automated liquidity provision on ethereum.
+			</div>
+			<!-- 第二段 -->
+			<div>
+				<div class="about-text-m">
+					<span class="about-text-bold">Balance ECO, the world's first decentralized gold standard smart contract, </span>
+					the entire contract will use ERC20 USDT as liquidity. USDT has the third largest market capitalization in the entire cryptocurrency field, and is more stable than other cryptocurrencies.
+				</div>
+				<div class="about-text-m">
+				All cryptocurrencies use USDT as their counterpart, which is known as digital gold, <span class="about-text-bold">Fortunately, with USDT as the underlying liquidity,smart contracts will continue to grow rapidly around the world.</span>
+				</div>
+			</div>
+			<!-- 第三段logo -->
+			<div>
+				<img class="about-logo" src="data:image/png;base64,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iT+HiayY/Pjjj/HVV1/F9ttvXw5QvOGGG8p2wT/88EN5/Ntvv40hQ4bE888/H6NGjYpjjjkm9t9//3jjjTdKtSWDSIaQp556qvSdZNjJ1/zTae7tGXmt5hxAMAGgCxrfztPesyKyxBJLxLbbbhsrrbRSbLXVVnHvvffGs88+O2t74JQVkZTPW3755Us/yR133BFPPPFEvP3222W3ro4e450CDyCYANA1tVSWUbVn5DKt7CfZcsstyxkkear7zJFLsTKUZF9KVlBqa2tj5513Lsu6+vfvX051z36ThTXyWs05gGACQBfU2s7DCy+44IISTLJqksuwZl/6lc3xuf1vBpZ999036ivnlOSyr1zGNWjQoLL8K0NLRyzdmn3ktZpzAMEEgC6ovVsF77nnnrN24fr444//sntX/j97TPLnSy+9tOzElQ3zV199ddx1113xwgsvxPvvvx99+/YtDfAdPfJazTmAYALAIhZMMnDkNsF5gOIaa6xRKh8zKyWff/552fo3f85G97q6uvL8PEAx+1Jm7vB1zz33lKVdudOXYAKAYAJgKVebR4aLHj16xLnnnhsnnXTSrOVYeZr7cccdV7YGzrAydOjQclhiVkyygjJ7uMkqylVXXVUCi6VcAAgmAJrf21wx2WijjcpuXLlt8MywkrttPf744+XnPJfkgAMOKE3uGU7yNXMKOPn47D0qmt8BEEwA/iXas11wBop99tmn9JfkEq2Zv9t7773Lie35c+/evcv2wNdff/08G9zn9ni1GuNtFwwgmADQRbXlgMU5jWxkz2Cy+uqrx+TJk0sT+9Zbb10qI9lbst1228VSSy0Vu+22WzmvpK0jtxweOXJkVcKJAxYBBBMAuqgR7TzY8JtvvilLudZcc81ycnsGiU022aQElFzetdxyy5WqyiqrrBK9evWKMWPGzHfIyF6VXBY2bNiwqgSTvFZzDiCYANAFDWluatcf+xkYLrnkkthss83i4YcfLpWS3EI4twrOs0t22mmnsowrqyobbrhhXH755TFhwoR5Bo1smu/Tp09572ot5cprNecAggkAXdCghvp2n2WSjeuHHnporLrqqvHaa6/F3XffHaeeemp8//33ceyxx8aHH35YgsmSSy5ZToi/7rrr/jGcZJP8s88+W8LOjz/+WLWtgvNazTmAYAJAF9XcOrXdf/hngDjmmGNi8803j48++ii23377sgRr9913j3HjxsXBBx8ce+21V6y11lqlcnLttdeWZV1z2qUrf7/NNtuUikm1Rl6juQYQTADowt6tVC+qMX799de47777SvXkwQcfLMu4TjvttLjpppvKmSYffPBBnHDCCaVystpqq5XHRowYUV43c+Tz+vXrFyussEIJNNUaeY3mGkAwAaALq21siOlV6uPI5VlNTU3Rv3//OOecc2KHHXYoO3blye65RGtipQF90KBBJbysu+66Zdeuiy66qCz3Gjt2bDnL5LDDDisVlmr1luS15TWaawDBBIAubsyUyVU9zDBDRVY/hg8fXprhl1122VItef3118uyr3w8Q0oGktra2rjssstKX8qAAQNi4403Ln0q1RqNlWszxwCCCQDdwOCmpuiokT0nuTTrrLPOisGDB8eTTz5ZAsrXX38d3333XTQ3N8ekSZPKFsOjRo0q2w9nE321Rl6bOQYQTADoNk3wrR0STLI6csMNN8Q999wz6/+tlc/Knbmy0T2rKnfeeWf07Nkzzj///LKDV56BUp2md6e9AwgmAHQrL1YqC9Xq65hTY/xbb7011+CShymus846ceKJJ5ZgkuegVCMQvahaAiCYAND9jKqcSdJR459CTz6WzfIHHXRQCSgvvPBCuz8vr8WcAggmAHRDj4xpjN/mcLbIwhgNDQ2xwQYbxBFHHBHXXHNNu6o3eQ15LeYUQDABoJsaOn5chy3pmtfIxvg8/+TII4/8y/kmba3M5DWYSwDBBIBu7otJP3dKMMlQ8eijj8Yee+wRzz333BxPhp/XyO9uDgEEEwAWAfdXjK00pHdWOMlT4s8777z45JNP2hRO8jvfb/4ABBMAFh0PNtTHhAVcTlWNkeeajB8/vpwYPz8jv2t+Z3MHIJgAsIipbWzo1HAyvyO/Y35XcwYgmACwCFdOOmtZ1/wu31IpARBMAPiX9JxkU3ln7dY1t16U/E56SgAEEwD+ZXIb3s4652T2c0psCQwgmLgRAP9ieXBhnqreGdWT/Mz8bIcnAiCYAFC82NQUza2tCy2U5GflZ7r3AAgmAPzN4EpYGDNlckzvgApKvme+92CBBADBBID5kdv1vjthQqWyMTWmtSOk5GvzPfK9bAEMgGACwAIbVNm+d0hzU4yYODG+bmmJ8ZVlWC2VAxNbK4clZvBI+XP+Lh/L5+Rz8zWDbP0LgGACAAAIJgAAAIIJAAAgmAAAAAgmAACAYAIAACCYAAAAggkAAIBgAgAACCYAAACCCQAAIJgAAAAIJgAAgGACAAAgmAAAAN0lmLS4EQAAQCdqyWAy0o0AAAA60ciagQ11D7kRAABAZ8lMUjOwru5wNwMAAOi0YFLJJDV9I5YaUD96lBsCAAAsfKNHZSapydG/oeE/AxvqZ7gpAADAwlvCVT8js0jNn0dlXVcfNwcAAFiIvSV9amYf/41YPB9QOQEAADq6UpLZIzNIzdxGllL0nAAAAB3VU/K35VtzG9l8MrCx7vD/bSWc55w4hBEAAFgQmSVGZrbI3bdmNbrPNv4PQ05m9Cihw+MAAAAASUVORK5CYII=" />
+			</div>
+			<!-- li -->
+			<div>
+				<div class="about-text-title">Introducing Balance ECO</div>
+				<li>Monthly liquidity gain: 10-30%.</li>
+				<li>The investment threshold is V1～V4, and the income for each level is as follows: V1 capped at 2x, V2 capped at 2.5x, V3 capped at 3x, V4 capped at 3.5x.</li>
+				<li>Bonus pool: 3% of daily incoming funds will flow into the bonus pool, 15% will be issued and 85% will automatically roll over to the next round.</li>
+				<li>Insurance Pool: 1.5% of the funds flow into the insurance pool, 70% is awarded to the global nodes and 30% is equally divided between V4.</li>
+				<li>Perpetual pool: 3.5% of the funds flow into the perpetual pool, when the first round of liquidity is not enough to support, the blockchain will automatically inject a new pool of contracts, forever continue the operation of Balance ECO, at the same time 80% of the ECO Token pool will be injected into the operation of the main contract circulation.</li>
+				<li>Global Nodes: Provide strong liquidity for Balance ECO and enjoy a global dividend for new capital coming in.</li>
+			</div>
+			<div>
+				<div class="about-text-title">Introducing ECO Token</div>
+				<li>The ECO Token is a token of Balance ECO, which must have 12% of the investment amount of ECO before entering the main contract to be eligible to participate in the blockchain contract，when the wallet address ECO is insufficient, the corresponding token will be resonated automatically. The decreasing resonance mechanism will make the ECO community-led growth.</li>
+				<li>When ECO reaches a certain amount of liquidity, it will land on the major Decentralized exchange, Centralized exchange.</li>
+				<li>ECO total issue volume is 35 million, resonance burn final circulation is 2.1 million, pre-resonance circulation 4.5 million. The remaining ECO Token contract pool will start liquidity mining and production.</li>
+				<li>The first time to participate in resonance, you will enjoy the bonus of air drop.</li>
+				<li>EID: After activating EID, invite others to participate in the resonance of ECO Token and enjoy 5% bonus of the resonance amount. Also the matrix mechanism of EID can increase the burning of ECO and is expected to reduce the liquidity by 30%.</li>
+			</div>
+			<!-- 最后 -->
+			<div style="margin: 30px 0;">
+				<div class="about-text-m">
+					With the tremendous success of the ethereum ecosystem, more and more people are learning about smart contracts. the ethereum ecosystem has been called the 2.0 era of blockchain, 
+					<span class="about-text-bold">blockchain is the trust-making machine, giving us more decentralized creation.</span>
+				</div>
+				<div class="about-text-m">
+					<span class="about-text-bold">Balance ECO is a document deployed on the ethereum blockchina height - the The USDT smart contract, once blockchain is done, no one will be able to tamper with it, including the contract creator. </span>
+					All the code of the contract has been open-sourced on the ethereum blockchain, the open-source code allows Balance ECO to be more credible, 
+					<span class="about-text-bold">it is truly fair, just, transparent and secure.</span>
+				</div>
+			</div>
+		</div>
+
+	</body>
+	
+	
+	
+	
+	<!-- 公共组件, 必须放在下面 -->
+	<script type="text/javascript">
+		/* 头部组件 */
+		$(".comm-head").load('./common/head.html');
+	</script>
+	
+	<style>
+		/* 引入样式包 */
+	    @import url("./css/all.css");
+		
+		#head-on3 {
+			color: #34CECC;
+		}
+		
+		.about-layout {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start
+		}
+		.about-layout {
+			text-align: left;
+		}
+		
+		.about-1 {
+			background: linear-gradient(to left, #D0F4F3, #FCFDFD);
+		}
+		.about-text-bold {
+			font-weight: bold;
+		}
+		.about-text-m {
+			margin-bottom: 20px;
+		}
+		.about-text-title {
+			font-weight: bold;
+			margin: 25px 0 13px 0;
+		}
+		
+		@media only screen and (min-width: 415px){
+			.about-1 {
+				font-size: 50px;
+				margin: 50px 0 30px 0;
+				padding: 10px 20% 10px 0;
+			}
+			.about-logo {
+				width: 120%;
+				margin-bottom: 10px;
+			}
+			.about-text-title {
+				font-size: 20px;
+				
+			}
+		}
+		
+		@media only screen and (max-width: 414px){
+			.about-1 {
+				font-size: 30px;
+				margin: 30px 0 20px 0;
+				padding: 10px 0;
+			}
+			.about-logo {
+				width: 100%;
+			}
+			.about-text-title {
+				font-size: 16px;
+			}
+		}
+	</style>
+</html>

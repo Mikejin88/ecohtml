@@ -1,0 +1,118 @@
+<div class="filling-layout">
+	<div class="filling-tips">
+		Token: ECO共振比例300U:5,904.900ECO
+	</div>
+	<div class="filling-input-layout">
+		<input class="filling-input"/>
+		<div class="filling-usdt">USDT</div>
+		<div class="filling-approve">批准</div>
+	</div>
+	<div class="filling-u">
+		<div>100U</div>
+		<div>300U</div>
+		<div>500U</div>
+		<div>1000U</div>
+		<div>1500U</div>
+		<div>2000U</div>
+		<div>2500U</div>
+		<div>5000U</div>
+	</div>
+</div>
+
+<style>
+	.filling-layout {
+		display: flex;
+		flex-direction: column;
+	}
+	.filling-layout > div {
+		margin-top: 10px;
+	}
+	.filling-u {
+		display: flex;
+		overflow-y: auto;
+		margin-bottom: 30px;
+	}
+	.filling-u > div {
+		border: 1px solid #E0E0E0;
+		margin-right: 10px;
+		padding: 1px 5px;
+		color: #808080;
+	}
+	
+	/* 宽度尺度大于1500时 */
+	@media only screen and (min-width: 415px){
+		.filling-layout {
+			width: 75%;
+			margin: 0 auto;
+			text-align: left;
+		}
+		/* 输入框 */
+		.filling-input-layout {
+			display: flex;
+		}
+		.filling-input:focus{
+			outline:none;
+		}
+		.filling-input {
+			padding: 10px 20px;
+			font-size: 20px;
+			border-radius: 20px 0 0 20px;
+			border: 1px solid #F5F5F5;
+			height: 30px;
+			flex-grow: 6;
+		}
+		.filling-usdt {
+			background: #FFFFFF;
+			line-height: 50px;
+			text-align: center;
+			flex-grow: 2;
+		}
+		.filling-approve {
+			background: #34CECC;
+			color: #FFFFFF;
+			line-height: 50px;
+			text-align: center;
+			border-radius: 0 20px 20px 0;
+			flex-grow: 2;
+		}
+	}
+	
+	/* 宽度尺寸小于414时 */
+	@media only screen and (max-width: 414px){
+		.filling-layout {
+			text-align: left;
+		}
+		.filling-tips {
+			font-size: 15px;
+		}
+		/* 输入框 */
+		.filling-input-layout {
+			display: flex;
+		}
+		.filling-input:focus{
+			outline:none;
+		}
+		.filling-input {
+			padding: 8px 15px;
+			font-size: 20px;
+			border-radius: 20px 0 0 20px;
+			border: 1px solid #F5F5F5;
+			height: 30px;
+			width: 50%;
+		}
+		.filling-usdt {
+			background: #FFFFFF;
+			text-align: center;
+			flex-grow: 1;
+			line-height: 46px;
+		}
+		.filling-approve {
+			background: #34CECC;
+			color: #FFFFFF;
+			text-align: center;
+			border-radius: 0 20px 20px 0;
+			flex-grow: 1;
+			line-height: 46px;
+		}
+	}
+</style>
